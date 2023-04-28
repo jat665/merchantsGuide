@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1650dd1a-4323-42d2-862e-c43b661a599e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/RomanUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/RomanUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/CommandUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/CommandUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/CommandUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/CommandUtilsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +39,7 @@
     "onboarding.tips.debug.path": "/Users/jarindia/Documents/MerchantsGuide/MerchantsGuide/src/main/java/org/example/Main.java"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.CommandUtilsTest.testHowManyCommandWithOneAlias">
+  <component name="RunManager" selected="JUnit.CommandUtilsTest.testHowMuchCommandWithOneAlias">
     <configuration name="CommandUtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MerchantsGuide" />
       <extension name="coverage">
@@ -86,7 +87,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommandUtilsTest.testToRegisterAliasProk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommandUtilsTest.testHowMuchCommandWithOneAlias" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MerchantsGuide" />
       <extension name="coverage">
         <pattern>
@@ -96,7 +97,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="utils" />
       <option name="MAIN_CLASS_NAME" value="utils.CommandUtilsTest" />
-      <option name="METHOD_NAME" value="testToRegisterAliasProk" />
+      <option name="METHOD_NAME" value="testHowMuchCommandWithOneAlias" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CommandUtilsTest.testHowMuchCommandWithOneAlias" />
         <item itemvalue="JUnit.CommandUtilsTest.testHowManyCommandWithOneAlias" />
         <item itemvalue="JUnit.CommandUtilsTest.testHowManyCommandWithSomeAlias" />
         <item itemvalue="JUnit.CommandUtilsTest" />
         <item itemvalue="JUnit.CommandUtilsTest.testUnregisteredAlias" />
-        <item itemvalue="JUnit.CommandUtilsTest.testToRegisterAliasProk" />
       </list>
     </recent_temporary>
   </component>

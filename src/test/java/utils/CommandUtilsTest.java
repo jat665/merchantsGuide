@@ -45,4 +45,15 @@ public class CommandUtilsTest {
         String result = commandUtils.processCommand("how many Credits is prok prok?");
         assertEquals("should be equal", "prok prok is 10 Credit(s)", result);
     }
+
+    @Test
+    public void testHowMuchCommandWithOneAlias() {
+        CommandUtils commandUtils = new CommandUtils();
+        commandUtils.processCommand("glob is I");
+        commandUtils.processCommand("prok is V");
+        commandUtils.processCommand("pish is X");
+        commandUtils.processCommand("tegj is L");
+        String result = commandUtils.processCommand("how much is pish tegj glob glob?");
+        assertEquals("should be equal", "pish tegj glob glob is 62", result);
+    }
 }
