@@ -2,10 +2,13 @@ package org.example.utils;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RomanUtils {
+    private final Pattern romanPattern = Pattern.compile("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$");
 
-    Map<Character, Integer> romanMap = new HashMap<>() {{
+    private final Map<Character, Integer> romanMap = new HashMap<>() {{
         put('I', 1);
         put('V', 5);
         put('X', 10);
@@ -15,10 +18,13 @@ public class RomanUtils {
         put('M', 1000);
     }};
 
-    public int toNumber(String roman) {
-        if (!romanMap.containsKey(roman.charAt(0))) {
+    public int toNumber(String romanNumber) {
+        // validate roman numeral
+        Matcher matcher = romanPattern.matcher(romanNumber);
+        if (!matcher.find()) {
             return -1;
         }
-        return romanMap.get(roman.charAt(0));
+
+        return romanMap.get(romanNumber.charAt(0));
     }
 }

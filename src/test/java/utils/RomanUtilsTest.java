@@ -41,18 +41,54 @@ public class RomanUtilsTest {
     @Test
     public void testToNumber100() {
         int result = romanUtils.toNumber("C");
-        assertEquals("'C' should be equal to 100", 100, result);
+        assertEquals("should be equal to 100", 100, result);
     }
 
     @Test
     public void testToNumber500() {
         int result = romanUtils.toNumber("D");
-        assertEquals("'C' should be equal to 500", 500, result);
+        assertEquals("should be equal to 500", 500, result);
     }
 
     @Test
     public void testToNumber1000() {
         int result = romanUtils.toNumber("M");
-        assertEquals("'C' should be equal to 1000", 1000, result);
+        assertEquals("should be equal to 1000", 1000, result);
+    }
+
+    @Test
+    public void testToInvalidNumber1() {
+        int result = romanUtils.toNumber("Z");
+        assertEquals("should be equal to -1", -1, result);
+    }
+
+    @Test
+    public void testToInvalidNumber2() {
+        int result = romanUtils.toNumber("IIII");
+        assertEquals("should be equal to -1", -1, result);
+    }
+
+    @Test
+    public void testToInvalidNumber3() {
+        int result = romanUtils.toNumber("XXXX");
+        assertEquals("should be equal to -1", -1, result);
+    }
+
+    @Test
+    public void testToInvalidNumber4() {
+        int result = romanUtils.toNumber("ID");
+        assertEquals("should be equal to -1", -1, result);
+    }
+
+    @Test
+    public void testToInvalidNumber5() {
+        int result = romanUtils.toNumber("IC");
+        assertEquals("should be equal to -1", -1, result);
+    }
+
+    @Test
+    public void testValidNumber() {
+        int result = romanUtils.toNumber("XXXIX");
+        assertTrue("should be different to -1", result != -1);
     }
 }
