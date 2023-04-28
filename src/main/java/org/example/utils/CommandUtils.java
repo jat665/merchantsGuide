@@ -7,6 +7,7 @@ public class CommandUtils {
 
     private static final String HOW_MANY_INSTRUCTION_FORMAT = "how many Credits is ";
     private static final String HOW_MUCH_INSTRUCTION_FORMAT = "how much is ";
+    private static final String ERROR_MESSAGE = "I have no idea what you are talking about";
 
     private final Map<String, Integer> aliasMap = new HashMap<>();
     private final RomanUtils romanUtils = new RomanUtils();
@@ -18,11 +19,13 @@ public class CommandUtils {
         if (command.contains(HOW_MUCH_INSTRUCTION_FORMAT)) {
             return runHowMuchInstruction(command);
         }
-
-        if (command.contains("is") && command.contains("Credits")) {
+        if (command.contains(" is ") && command.contains(" Credits")) {
             return runRegisterUnitCreditFormat(command);
         }
-        return runRegisterUnit(command);
+        if (command.contains(" is ")) {
+            return runRegisterUnit(command);
+        }
+        return ERROR_MESSAGE;
     }
 
     private String runRegisterUnit(String command) {
@@ -69,7 +72,7 @@ public class CommandUtils {
         int count = 0;
         for (String aliasItem : alias.split("\\s+")) {
             if (!aliasMap.containsKey(aliasItem)) {
-                return "I have no idea what you are talking about";
+                return ERROR_MESSAGE;
             }
             count += aliasMap.get(aliasItem);
         }
@@ -85,7 +88,7 @@ public class CommandUtils {
         int count = 0;
         for (String aliasItem : alias.split("\\s+")) {
             if (!aliasMap.containsKey(aliasItem)) {
-                return "I have no idea what you are talking about";
+                return ERROR_MESSAGE;
             }
             count += aliasMap.get(aliasItem);
         }
