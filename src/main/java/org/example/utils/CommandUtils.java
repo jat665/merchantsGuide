@@ -19,11 +19,46 @@ public class CommandUtils {
             return runHowMuchInstruction(command);
         }
 
+        if (command.contains("is") && command.contains("Credits")) {
+            return runRegisterUnitCreditFormat(command);
+        }
+        return runRegisterUnit(command);
+    }
+
+    private String runRegisterUnit(String command) {
+        final int ROMAN_NUMERAL_INDEX = 2;
+        final int ALIAS_INDEX = 0;
+
         String[] array = command.split("\\s+");
-        String romanNumeral = array[2];
+        String romanNumeral = array[ROMAN_NUMERAL_INDEX].trim();
         int result = romanUtils.toNumber(romanNumeral);
-        aliasMap.put(array[0], result);
-        return array[0] + " registered successfully";
+        String alias = array[ALIAS_INDEX].trim();
+        aliasMap.put(alias, result);
+        return alias + " registered successfully";
+    }
+
+    private String runRegisterUnitCreditFormat(String command) {
+        final int ALIAS_INDEX = 0;
+        final int TOTAL_VALUE_INDEX = 1;
+
+        String instruction = command
+                .replace("Credits", "");
+
+        String[] array = instruction.split(" is ");
+        String alias = array[ALIAS_INDEX].trim();
+        String aliasToAdd = null;
+        int value = Integer.parseInt(array[TOTAL_VALUE_INDEX].trim());
+        for (String aliasItem : alias.split("\\s+")) {
+            if (!aliasMap.containsKey(aliasItem)) {
+                aliasToAdd = aliasItem;
+            } else {
+                value -= aliasMap.get(aliasItem);
+            }
+        }
+        if (aliasToAdd != null) {
+            aliasMap.put(aliasToAdd, value);
+        }
+        return aliasToAdd + " registered successfully";
     }
 
     private String runHowManyInstruction(String command) {

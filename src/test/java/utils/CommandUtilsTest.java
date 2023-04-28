@@ -56,4 +56,16 @@ public class CommandUtilsTest {
         String result = commandUtils.processCommand("how much is pish tegj glob glob?");
         assertEquals("should be equal", "pish tegj glob glob is 62", result);
     }
+
+    @Test
+    public void testRegisterUnitCreditFormat() {
+        CommandUtils commandUtils = new CommandUtils();
+        commandUtils.processCommand("glob is I");
+        commandUtils.processCommand("prok is V");
+        commandUtils.processCommand("pish is X");
+        commandUtils.processCommand("tegj is L");
+        commandUtils.processCommand("glob glob Silver is 34 Credits");
+        assertEquals("should be equal", "Silver is 32 Credit(s)", commandUtils.processCommand("how many Credits is Silver?"));
+        assertEquals("should be equal", "glob prok Silver is 38 Credit(s)", commandUtils.processCommand("how many Credits is glob prok Silver?"));
+    }
 }

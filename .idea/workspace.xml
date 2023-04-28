@@ -39,7 +39,7 @@
     "onboarding.tips.debug.path": "/Users/jarindia/Documents/MerchantsGuide/MerchantsGuide/src/main/java/org/example/Main.java"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.CommandUtilsTest.testHowMuchCommandWithOneAlias">
+  <component name="RunManager" selected="JUnit.CommandUtilsTest">
     <configuration name="CommandUtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MerchantsGuide" />
       <extension name="coverage">
@@ -103,7 +103,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommandUtilsTest.testUnregisteredAlias" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommandUtilsTest.testRegisterUnitCreditFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MerchantsGuide" />
       <extension name="coverage">
         <pattern>
@@ -113,7 +113,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="utils" />
       <option name="MAIN_CLASS_NAME" value="utils.CommandUtilsTest" />
-      <option name="METHOD_NAME" value="testUnregisteredAlias" />
+      <option name="METHOD_NAME" value="testRegisterUnitCreditFormat" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CommandUtilsTest" />
+        <item itemvalue="JUnit.CommandUtilsTest.testRegisterUnitCreditFormat" />
         <item itemvalue="JUnit.CommandUtilsTest.testHowMuchCommandWithOneAlias" />
         <item itemvalue="JUnit.CommandUtilsTest.testHowManyCommandWithOneAlias" />
         <item itemvalue="JUnit.CommandUtilsTest.testHowManyCommandWithSomeAlias" />
-        <item itemvalue="JUnit.CommandUtilsTest" />
-        <item itemvalue="JUnit.CommandUtilsTest.testUnregisteredAlias" />
       </list>
     </recent_temporary>
   </component>
