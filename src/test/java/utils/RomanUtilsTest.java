@@ -91,4 +91,35 @@ public class RomanUtilsTest {
         int result = romanUtils.toNumber("XXXIX");
         assertTrue("should be different to -1", result != -1);
     }
+
+    @Test
+    public void testComplexNumbers3() {
+        int result = romanUtils.toNumber("III");
+        assertEquals("should be 3", 3, result);
+    }
+
+    @Test
+    public void testComplexNumbers30() {
+        int result = romanUtils.toNumber("XXX");
+        assertEquals("should be 30", 30, result);
+    }
+
+    @Test
+    public void testComplexNumbers39() {
+        int result = romanUtils.toNumber("XXXIX");
+        assertEquals("should be 39", 39, result);
+    }
+
+    @Test
+    public void testComplexNumbers1994() {
+        int result = romanUtils.toNumber("MCMXCIV");
+        assertEquals("should be 1994", 1994, result);
+    }
+
+    @Test
+    public void testComplexNumbers799() {
+        int result = romanUtils.toNumber("DCCXCIX");
+        assertEquals("should be 1994", 799, result);
+    }
+
 }

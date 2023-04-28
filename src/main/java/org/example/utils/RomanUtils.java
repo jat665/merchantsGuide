@@ -25,6 +25,20 @@ public class RomanUtils {
             return -1;
         }
 
-        return romanMap.get(romanNumber.charAt(0));
+        int counter = 0;
+        Character lastChar = null;
+        int previousValue = -1;
+        for (char c : romanNumber.toCharArray()) {
+            int value = romanMap.get(c);
+            if (lastChar != null) {
+                previousValue = romanMap.get(lastChar);
+                if (previousValue < value) {
+                    counter -= previousValue * 2;
+                }
+            }
+            counter += value;
+            lastChar = c;
+        }
+        return counter;
     }
 }
