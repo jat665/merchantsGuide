@@ -18,6 +18,8 @@ public class RomanUtils {
         put('M', 1000);
     }};
 
+    private final Map<Character, Integer> alias = new HashMap<>();
+
     public int toNumber(String romanNumber) {
         // validate roman numeral
         Matcher matcher = romanPattern.matcher(romanNumber);
